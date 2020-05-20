@@ -5,27 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TranslateApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Foreground="#f6f6f6" FontSize="16" Background="#111">
+	<Window.Resources>
+		<Style TargetType="Button">
+			<Setter Property="Background" Value="#444"/>
+			<Setter Property="Foreground" Value="#f6f6f6"/>
+		</Style>
+	</Window.Resources>
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50"/>
 			<RowDefinition />
 			<RowDefinition Height="50"/>
 		</Grid.RowDefinitions>
-		<Border Grid.Row="0" Background="#bbb">
+		<Border Grid.Row="0">
 			<TextBlock Text="Header" Name="HeaderText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		</Border>
-
-		<Border Grid.Row="1" Padding="5" Background="#f1f1f1">
+		<Border Grid.Row="1" Padding="5" Background="#333">
 			<StackPanel Orientation="Vertical" MaxWidth="500" VerticalAlignment="Center">
 				<DockPanel LastChildFill="True">
-					<TextBlock Text="Enter your name: " Name="NameTextBlock" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
-					<TextBox Name="NameTextBox" Margin="5" Padding="5" VerticalAlignment="Center"/>
+					<TextBlock Text="Enter your name: " Name="NameTextBlock" Margin="5" VerticalAlignment="Center" FontWeight="DemiBold"/>
+					<TextBox Name="NameTextBox" Margin="5" Padding="5" VerticalAlignment="Center" Background="#444" Foreground="#f6f6f6"/>
 				</DockPanel>
-				<Button Name="ConfirmButton" Content="Confirm" Margin="5" Click="ConfirmButton_Click" IsDefault="True"/>
+				<Button Name="ConfirmButton" Content="Confirm" Margin="5" Click="ConfirmButton_Click" IsDefault="True" Padding="5"/>
 			</StackPanel>
 		</Border>
-		<Border Background="#bbb" Padding="5" Grid.Row="2">
+		<Border Padding="5" Grid.Row="2">
 			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Name="LocaleButtons">
 				
 			</StackPanel>

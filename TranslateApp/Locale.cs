@@ -7,8 +7,11 @@ namespace TranslateApp
 {
 	public class Locale
 	{
+		//Название языка
 		private string name;
 
+		//Словарь с надписями на этом языке
+		//Ключ - название элемента, который нужно перевести
 		private Dictionary<string, string> values;
 
 		public Locale(string name, Dictionary<string, string> values)
